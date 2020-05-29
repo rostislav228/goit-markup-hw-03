@@ -173,6 +173,25 @@ img {
   font-weight: 500;
   letter-spacing: 0.02em;
 }
+
+.contact-link::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+
+.contact-link.envelope::before {
+  background-image: url(../images/envelope.svg);
+}
+
+.contact-link.smartphone::before {
+  background-image: url(../images/smartphone.svg);
+}
+
 /* подвал */
 
 .logo-footer {
@@ -220,8 +239,43 @@ img {
   text-transform: uppercase;
 }
 
-.footer .social-networks {
+.footer__social-networks {
   margin-top: 21px;
+}
+
+.footer__social-networks .element {
+  margin-right: 10px;
+}
+
+.footer__social-networks .element:nth-last-child(1) {
+  margin-right: 0px;
+}
+
+.footer__social-networks .link {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+}
+
+.footer__social-networks .icon-instagram {
+  background-image: url(../images/social-networks-inversion/instagram2.svg);
+}
+
+.footer__social-networks .icon-twitter {
+  background-image: url(../images/social-networks-inversion/twitter1.svg);
+}
+
+.footer__social-networks .icon-facebook {
+  background-image: url(../images/social-networks-inversion/facebook1.svg);
+}
+
+.footer__social-networks .icon-linkedin {
+  background-image: url(../images/social-networks-inversion/linkedin1.svg);
 }
 
 .footer-container {
@@ -239,6 +293,27 @@ img {
 /* main index */
 
 /* герой */
+
+.hero {
+  background-color: rgba(47, 48, 58, 0.8);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../images/Header-img.jpg);
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero .container {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
 
 .hero-title {
   color: var(--white-color-text);
@@ -273,6 +348,32 @@ img {
 .flex-featurest .element {
   width: 278px;
   margin-right: 30px;
+}
+
+.flex-featurest .element::before {
+  content: "";
+  display: inline-block;
+  width: 270px;
+  height: 120px;
+  background-color: var(--secondary-background-color);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.flex-featurest .element:nth-child(1)::before {
+  background-image: url(../images/advantages/antenna1.svg);
+}
+
+.flex-featurest .element:nth-child(2)::before {
+  background-image: url(../images/advantages/clock1.svg);
+}
+
+.flex-featurest .element:nth-child(3)::before {
+  background-image: url(../images/advantages/diagram1.svg);
+}
+
+.flex-featurest .element:nth-child(4)::before {
+  background-image: url(../images/advantages/astronaut1.svg);
 }
 
 .flex-featurest .element:nth-child(4n) {
@@ -331,11 +432,14 @@ img {
   display: flex;
 }
 
-.specialists .element {
+.specialists > .element {
   width: 270px;
   margin-right: 30px;
   background-color: var(--white-color-text);
   border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 
 .specialists .element:nth-child(4n) {
@@ -367,15 +471,46 @@ img {
   margin-top: 10px;
 }
 
-.social-networks {
+.social-networks,
+.footer__social-networks {
   display: flex;
   margin-top: 16px;
 }
+
+.social-networks {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
 .social-networks .element {
   margin-right: 10px;
 }
 .social-networks .element:nth-last-child(-n + 1) {
   margin-right: 0px;
+}
+
+.social-networks .link {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-instagram {
+  background-image: url(../images/social-networks/instagram2.svg);
+}
+
+.icon-twitter {
+  background-image: url(../images/social-networks/twitter1.svg);
+}
+
+.icon-facebook {
+  background-image: url(../images/social-networks/facebook1.svg);
+}
+
+.icon-linkedin {
+  background-image: url(../images/social-networks/linkedin1.svg);
 }
 
 /* клиенты */
